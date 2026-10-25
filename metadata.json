@@ -1,0 +1,6 @@
+{
+  "name": "DayByDay — Small Steps. Every Day.",
+  "description": "Build better learning habits, track your progress, and achieve your goals one day at a time.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

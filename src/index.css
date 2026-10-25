@@ -1,0 +1,350 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #2B3040;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3B4256;
+}
+
+/* ============================================================
+   REFINED DARK SLATE THEME SPECIFICATION
+   Main background:    #0F1117
+   Sidebar background: #151821
+   Card background:    #1B1F2A
+   Borders:            #2B3040
+   Primary text:       #F1F3F9
+   Secondary text:     #A5ADBD
+   Primary accent:     #A78BFA
+   Hover accent:       #8B5CF6
+   Success:            #34D399
+   Warning:            #FBBF24
+   Error:              #F87171
+   ============================================================ */
+
+/* 1. Page Backgrounds & Roots */
+html.dark,
+html.dark body,
+html.dark #root,
+html.dark .min-h-screen,
+html.dark main {
+  background-color: #0F1117 !important;
+  color: #F1F3F9 !important;
+}
+
+/* 2. Sidebar Navigation */
+html.dark aside {
+  background-color: #151821 !important;
+  border-color: #2B3040 !important;
+}
+
+/* Inactive nav buttons in sidebar */
+html.dark aside nav button {
+  color: #A5ADBD !important;
+}
+html.dark aside nav button:hover {
+  background-color: #1B1F2A !important;
+  color: #F1F3F9 !important;
+}
+
+/* Active nav button in sidebar */
+html.dark aside nav button.bg-purple-100\/70,
+html.dark aside nav .bg-purple-100\/70 {
+  background-color: rgba(167, 139, 250, 0.14) !important;
+  color: #F1F3F9 !important;
+  border: 1px solid rgba(167, 139, 250, 0.25) !important;
+}
+
+/* Sidebar Streak widget */
+html.dark aside .bg-purple-50\/70 {
+  background-color: #1B1F2A !important;
+  border-color: #2B3040 !important;
+}
+html.dark aside .bg-purple-50\/70 .text-slate-800 {
+  color: #F1F3F9 !important;
+}
+html.dark aside .bg-purple-50\/70 .text-slate-500 {
+  color: #A5ADBD !important;
+}
+html.dark aside .bg-purple-50\/70 .bg-white {
+  background-color: #151821 !important;
+  color: #A78BFA !important;
+  border-color: #2B3040 !important;
+}
+
+/* 3. Header */
+html.dark header {
+  background-color: rgba(21, 24, 33, 0.95) !important;
+  border-color: #2B3040 !important;
+}
+html.dark header h1 {
+  color: #F1F3F9 !important;
+}
+html.dark header .text-slate-500 {
+  color: #A5ADBD !important;
+}
+
+/* 4. Cards & Modals */
+html.dark .bg-white,
+html.dark [role="dialog"],
+html.dark .modal-card {
+  background-color: #1B1F2A !important;
+  color: #F1F3F9 !important;
+}
+
+/* Inset containers, inputs, table rows */
+html.dark .bg-slate-50,
+html.dark .bg-slate-50\/40,
+html.dark .bg-slate-50\/50,
+html.dark .bg-slate-50\/60,
+html.dark .bg-slate-50\/70,
+html.dark .bg-slate-100 {
+  background-color: #151821 !important;
+}
+
+html.dark .bg-slate-200,
+html.dark .bg-slate-200\/70,
+html.dark .bg-slate-300 {
+  background-color: #242938 !important;
+}
+
+html.dark .hover\:bg-slate-50:hover,
+html.dark .hover\:bg-slate-100:hover,
+html.dark .hover\:bg-slate-200:hover {
+  background-color: #242938 !important;
+}
+
+/* 5. Borders */
+html.dark .border-purple-100,
+html.dark .border-purple-100\/50,
+html.dark .border-purple-100\/60,
+html.dark .border-purple-100\/70,
+html.dark .border-purple-100\/80,
+html.dark .border-purple-50,
+html.dark .border-purple-200,
+html.dark .border-purple-200\/80,
+html.dark .border-purple-300,
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-300 {
+  border-color: #2B3040 !important;
+}
+
+/* 6. Typography */
+html.dark .text-slate-900,
+html.dark .text-slate-800,
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark strong {
+  color: #F1F3F9 !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-slate-600,
+html.dark .text-slate-500,
+html.dark .text-slate-400 {
+  color: #A5ADBD !important;
+}
+
+/* 7. Restrained Lavender Accents */
+/* Accent text */
+html.dark .text-purple-600,
+html.dark .text-purple-700,
+html.dark .text-purple-800,
+html.dark .text-purple-900 {
+  color: #A78BFA !important;
+}
+
+/* Subtle accent pills & chips */
+html.dark .bg-purple-50,
+html.dark .bg-purple-50\/20,
+html.dark .bg-purple-50\/30,
+html.dark .bg-purple-50\/40,
+html.dark .bg-purple-50\/70,
+html.dark .bg-purple-50\/80,
+html.dark .bg-purple-100,
+html.dark .bg-purple-100\/50,
+html.dark .bg-purple-100\/70,
+html.dark .bg-purple-100\/80 {
+  background-color: rgba(167, 139, 250, 0.12) !important;
+  color: #A78BFA !important;
+  border-color: rgba(167, 139, 250, 0.22) !important;
+}
+
+html.dark .hover\:bg-purple-50:hover,
+html.dark .hover\:bg-purple-100:hover,
+html.dark .hover\:bg-purple-50\/20:hover {
+  background-color: rgba(167, 139, 250, 0.2) !important;
+}
+
+/* Primary buttons */
+html.dark button.bg-purple-600,
+html.dark .bg-purple-600 {
+  background-color: #A78BFA !important;
+  color: #0F1117 !important;
+  font-weight: 600 !important;
+}
+
+html.dark button.bg-purple-600:hover,
+html.dark .hover\:bg-purple-700:hover,
+html.dark .bg-purple-700 {
+  background-color: #8B5CF6 !important;
+  color: #FFFFFF !important;
+}
+
+/* Secondary / Outline buttons in dark mode */
+html.dark button.border-slate-200,
+html.dark button.bg-white {
+  background-color: #1B1F2A !important;
+  color: #F1F3F9 !important;
+  border-color: #2B3040 !important;
+}
+html.dark button.border-slate-200:hover,
+html.dark button.bg-white:hover {
+  background-color: #242938 !important;
+}
+
+/* 8. Form Fields, Inputs & Selects */
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #151821 !important;
+  color: #F1F3F9 !important;
+  border-color: #2B3040 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #6B7280 !important;
+}
+
+html.dark input:focus,
+html.dark select:focus,
+html.dark textarea:focus {
+  border-color: #A78BFA !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.25) !important;
+}
+
+/* 9. Status Colors */
+/* Success (#34D399) */
+html.dark .text-emerald-500,
+html.dark .text-emerald-600,
+html.dark .text-emerald-700,
+html.dark .text-emerald-800 {
+  color: #34D399 !important;
+}
+html.dark .bg-emerald-50,
+html.dark .bg-emerald-100 {
+  background-color: rgba(52, 211, 153, 0.12) !important;
+  color: #34D399 !important;
+  border-color: rgba(52, 211, 153, 0.25) !important;
+}
+html.dark .bg-emerald-500,
+html.dark .bg-emerald-600 {
+  background-color: #34D399 !important;
+  color: #0F1117 !important;
+}
+
+/* Warning (#FBBF24) */
+html.dark .text-amber-500,
+html.dark .text-amber-600,
+html.dark .text-amber-700,
+html.dark .text-amber-800 {
+  color: #FBBF24 !important;
+}
+html.dark .bg-amber-50,
+html.dark .bg-amber-100 {
+  background-color: rgba(251, 191, 36, 0.12) !important;
+  color: #FBBF24 !important;
+  border-color: rgba(251, 191, 36, 0.25) !important;
+}
+html.dark .bg-amber-500 {
+  background-color: #FBBF24 !important;
+  color: #0F1117 !important;
+}
+
+/* Error (#F87171) */
+html.dark .text-rose-500,
+html.dark .text-rose-600,
+html.dark .text-rose-700,
+html.dark .text-red-500,
+html.dark .text-red-600 {
+  color: #F87171 !important;
+}
+html.dark .bg-rose-50,
+html.dark .bg-rose-50\/20,
+html.dark .bg-rose-50\/30,
+html.dark .bg-rose-50\/40,
+html.dark .bg-rose-100,
+html.dark .bg-red-50 {
+  background-color: rgba(248, 113, 113, 0.12) !important;
+  color: #F87171 !important;
+  border-color: rgba(248, 113, 113, 0.25) !important;
+}
+html.dark .bg-rose-600 {
+  background-color: #F87171 !important;
+  color: #FFFFFF !important;
+}
+
+/* 10. Dashboard Quick Action Banner */
+html.dark .bg-gradient-to-r.from-purple-700 {
+  background: linear-gradient(135deg, #181B26 0%, #222038 50%, #1B1E2B 100%) !important;
+  border: 1px solid #2B3040 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+html.dark .bg-gradient-to-r.from-purple-700 .text-purple-100 {
+  color: #A5ADBD !important;
+}
+html.dark .bg-gradient-to-r.from-purple-700 button.bg-white {
+  background-color: #A78BFA !important;
+  color: #0F1117 !important;
+}
+html.dark .bg-gradient-to-r.from-purple-700 button.bg-white:hover {
+  background-color: #8B5CF6 !important;
+  color: #FFFFFF !important;
+}
+
+/* 11. Study Timer & Stopwatch */
+html.dark .bg-purple-50\/80 {
+  background-color: #151821 !important;
+  border-color: #2B3040 !important;
+}
+
+/* 12. Charts & Analytics */
+html.dark .bg-purple-200 {
+  background-color: #2B3040 !important;
+}
+
+/* 13. Dialog Backdrops */
+html.dark .bg-slate-900\/40 {
+  background-color: rgba(15, 17, 23, 0.8) !important;
+}
