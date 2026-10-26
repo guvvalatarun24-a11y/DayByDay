@@ -3,7 +3,6 @@ import App from './App.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(<App />);
-<<<<<<< HEAD
 
 if (import.meta.env.PROD && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -15,5 +14,3 @@ if (import.meta.env.PROD && 'serviceWorker' in navigator) {
       });
   });
 }
-=======
->>>>>>> a1ebbdf4ee6c5ba1b1354632d1633ba619606d27
