@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="dayByDayGrad" x1="4" y1="44" x2="44" y2="4" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EA580C" />
+      <stop offset="40%" stop-color="#F97316" />
+      <stop offset="85%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#FBBF24" />
+    </linearGradient>
+    <linearGradient id="dayByDayGlow" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#EA580C" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background subtle rounded base for high contrast on any background -->
+  <rect width="48" height="48" rx="12" fill="#0F1117" />
+  <rect width="48" height="48" rx="12" fill="url(#dayByDayGlow)" />
+  <rect x="0.5" y="0.5" width="47" height="47" rx="11.5" stroke="#F97316" stroke-opacity="0.25" />
+
+  <!-- Progressive 3 ascending daily milestone steps -->
+  <!-- Step 1: Foundation (Today) -->
+  <rect x="10" y="27" width="6.5" height="12" rx="3.25" fill="url(#dayByDayGrad)" />
+  
+  <!-- Step 2: Momentum (Growing) -->
+  <rect x="19.5" y="19" width="6.5" height="20" rx="3.25" fill="url(#dayByDayGrad)" />
+  
+  <!-- Step 3: Elevation (Goal/Mastery) -->
+  <rect x="29" y="11" width="6.5" height="28" rx="3.25" fill="url(#dayByDayGrad)" />
+
+  <!-- Rising trajectory spark at top right -->
+  <path d="M38.5 7.5L39.5 10L42 11L39.5 12L38.5 14.5L37.5 12L35 11L37.5 10L38.5 7.5Z" fill="#FDE047" />
+</svg>

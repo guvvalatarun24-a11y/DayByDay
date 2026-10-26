@@ -1,0 +1,22 @@
+{
+  "name": "DayByDay",
+  "short_name": "DayByDay",
+  "description": "Personal Learning Tracker",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#A78BFA",
+  "background_color": "#F8FAFC",
+  "icons": [
+    {
+      "src": "/daybyday-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/daybyday-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
